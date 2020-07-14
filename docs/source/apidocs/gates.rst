@@ -33,12 +33,37 @@ between neighboring qubits. Rigetti QPUs can natively measure in the computation
     MEASURE
 
 
+Quilt instructions
+------------------
+
+Quilt extends the above "native" operations with several more.
+
+.. autosummary::
+    :toctree: autogen
+    :template: autosumm.rst
+
+    PULSE
+    SET_FREQUENCY
+    SHIFT_FREQUENCY
+    SET_PHASE
+    SHIFT_PHASE
+    SWAP_PHASE
+    SET_SCALE
+    CAPTURE
+    RAW_CAPTURE
+    DELAY
+    FENCE
+    
+
+
 All gates and instructions
 --------------------------
 
 In general, you will write a quantum program using the full suite of Quil gates and instructions
 and use :ref:`the Quil compiler <compiler>` to compile programs into the target instruction
-set (ISA). The full list of quantum gates and classical Quil instructions is enumerated here.
+set (ISA).
+
+Furthermore, Quilt instructions may be executed natively, although are not fully supported by the Quil compiler or QVM.
 
 .. rubric:: Single-qubit gates
 .. autosummary::
@@ -75,7 +100,24 @@ set (ISA). The full list of quantum gates and classical Quil instructions is enu
     PSWAP
 
 
-.. rubric:: Classical instructions
+.. rubric:: Quilt instructions
+.. autosummary::
+    :toctree: autogen
+    :template: autosumm.rst
+
+    PULSE
+    SET_FREQUENCY
+    SHIFT_FREQUENCY
+    SET_PHASE
+    SHIFT_PHASE
+    SWAP_PHASE
+    SET_SCALE
+    CAPTURE
+    RAW_CAPTURE
+    DELAY
+    FENCE
+
+.. rubric:: Other classical instructions
 .. autosummary::
     :toctree: autogen
     :template: autosumm.rst
@@ -110,5 +152,6 @@ set (ISA). The full list of quantum gates and classical Quil instructions is enu
 .. autosummary::
 
     QUANTUM_GATES
+    QUILT_INSTRUCTIONS
     STANDARD_INSTRUCTIONS
 

@@ -30,6 +30,7 @@ between neighboring qubits. Rigetti QPUs can natively measure in the computation
     RX
     RZ
     CZ
+    XY
     MEASURE
 
 
